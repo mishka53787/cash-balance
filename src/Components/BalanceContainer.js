@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { deposit, withdraw } from './redux/actions';
+import AppWithProvider from './store';
+
 
 const BalanceContainer = () => {
   const [amount, setAmount] = useState('');
-  const balance = useSelector((state) => state.balance);
+  const balance = useSelector((state) => state.balance)
   const dispatch = useDispatch();
 
   const handleDeposit = () => {
@@ -22,9 +23,18 @@ const BalanceContainer = () => {
     }
   };
 
-  // Rest of the component code
+  return (
+    <div>
+      <p>Balance: {balance}</p>
+      <input type="text" value={amount} onChange={(e) => setAmount(e.target.value)} />
+      <button onClick={handleDeposit}>Deposit</button>
+      <button onClick={handleWithdraw}>Withdraw</button>
+    </div>
+  );
 };
 
 export default BalanceContainer;
-;
+
+ 
+
 
