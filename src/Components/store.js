@@ -1,10 +1,8 @@
-// Store.js
 import React from 'react';
 import { createStore } from 'redux';
 import reducer from './redux/reducer';
-import BalanceContainer from './BalanceContainer' // Assuming this is your actual component
+import BalanceContainer from './BalanceContainer';
 import { Provider } from 'react-redux';
-
 
 const store = createStore(reducer);
 
@@ -15,3 +13,4 @@ const AppWithProvider = () => (
 );
 
 export default AppWithProvider;
+

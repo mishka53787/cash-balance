@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deposit, withdraw } from './redux/actions';
-import AppWithProvider from './store';
+
 
 
 const BalanceContainer = () => {
